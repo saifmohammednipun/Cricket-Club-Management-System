@@ -1,0 +1,336 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[a4paper, 12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\usepackage[normalem]{ulem}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\pagestyle{empty} % Removes page number
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry} % Adjust margins
+\author{}
+\date{}
+\begin{document}
+\section{\underline{1. Identification of Relationships}}
+
+\subsection{One-to-Many Relationships}
+
+\begin{enumerate}
+\item Players – Contracts \\
+- One player can have multiple contracts.
+\item Players – Awards \\
+- One player can receive multiple awards.
+\item Players – Teams \\
+- One Team can have Multiple players.
+\item Coaches – Teams \\
+- One Team can have Multiple coaches.
+\item Teams – Practice Sessions \\
+- One team can conduct multiple practice sessions.
+\item Teams – Training Equipment \\
+- One team can have multiple pieces of training equipment.
+\item Teams – Awards \\
+- One team can receive multiple awards.
+\item Teams – Medical Staffs \\
+- One team can have multiple medical staff members.
+\item Injuries – Medical Staffs \\
+- One injury may require attention from multiple medical staff members.
+\item Committee Members – Selection Committee \\
+- One committee member can belong to multiple selection committees.
+\item Matches – Grounds \\
+- One match can be played on a single ground.
+\item Matches – Tournaments \\
+- One A tournament can have multiple matches.
+\item Matches – Practice\_Sessions \\
+- A match can have multiple practice sessions.
+\item Merchandise – Matches \\
+- One merchandise item can be associated with multiple matches.
+\item Merchandise – Teams \\
+- One merchandise item can be associated with multiple teams.
+\item Ticketing – Matches \\
+- One ticketing instance can be associated with multiple matches.
+\end{enumerate}
+
+
+\subsection{Many-to-Many Relationships}
+
+\begin{enumerate}
+\item Players – Matches \\
+- One player can participate in multiple matches, and one match can have multiple players.
+\item Players – Practice Sessions \\
+- Players can attend multiple practice sessions, and a practice session can involve multiple players.
+\item Players – Scorers \\
+- Players can score in multiple matches, and one match can have multiple scorers.
+\item Coaches – Matches \\
+- Coaches can participate in multiple matches, and one match can have multiple coaches.
+\item Coaches – Practice\_Sessions \\
+- Coaches can attend multiple practice sessions, and a practice session can involve multiple coaches.
+\item Teams – Tournaments \\
+- Teams can participate in multiple tournaments, and one tournament can have multiple teams.
+\item Teams – Sponsors \\
+- Teams can have multiple sponsors, and a sponsor can sponsor multiple teams.
+\item Injuries – Players \\
+- Players can suffer multiple injuries, and an injury can affect multiple players.
+\item Injuries – Matches \\
+- Injuries can occur in multiple matches, and one match can have multiple injuries.
+\item Injuries – Practice Sessions \\
+- Injuries can occur during multiple practice sessions, and a practice session can have multiple injuries.
+\item Matches – Umpires \\
+- A match can have multiple umpires, and an umpire can be involved in many matches.
+\item Matches – Match\_Officials \\
+- A match can have multiple match officials, and an official can be involved in many matches.
+\item Matches – Scorers \\
+- A match can have multiple scorers, and a scorer can score in many matches.
+\item Match\_Coverage - Matches\\
+- A match can have multiple media coverage, and a media coverage can show multiple matches.
+\item Selection\_Committee – Players \\
+- The selection committee can select multiple players for matches and tournaments. A player can be selected multiple times for different matches and tournaments.
+\item Training\_Equipment – Practice\_Sessions \\
+- A training equipment can be used in multiple practice sessions. A practice session can use multiple training equipment.
+\item Transportation – Matches \\
+- A type of transportation can be used in many matches. And a match can have many types of transportation.
+\item Transportation – Tournaments \\
+- A type of transportation can be used in many tournaments. And a tournament can have many types of transportation
+\item Community Outreach – Fan Clubs \\
+- Community outreach can involve multiple fan clubs, and a fan club can participate in multiple outreach programs.
+\item Community Outreach – Volunteers \\
+- Community outreach can involve multiple volunteers, and a volunteer can participate in multiple outreach programs.
+\item Community Outreach – Charity Drives \\
+- Community outreach can involve multiple charity drives, and a charity drive can be part of multiple outreach programs.
+\item Charity Drives – Sponsors \\
+- Charity drives can have multiple sponsors, and a sponsor can sponsor multiple charity drives.
+\item Charity Drives – Teams \\
+- Charity drives can involve multiple teams, and a team can participate in multiple charity drives.
+\item Charity Drives – Players \\
+- Charity drives can involve multiple players, and a player can participate in multiple charity drives.
+\item Fan Clubs – Players \\
+- Fan clubs can have multiple players, and a player can be associated with multiple fan clubs.
+\end{enumerate}
+
+\subsection{One-to-One Relationships}
+
+\begin{enumerate}
+\item Players – Registration \\
+- Each player has a single registration.
+\item Coaches – Contracts \\
+- Each coach has a single contract.
+\item Matches – Teams \\
+- Each match is associated with two teams.
+\item Matches – Media\_Rights \\
+- Each match can have a single media right.
+\item Fan Clubs – Teams \\
+- Each fan clubs support separate teams.
+\item Social Media – Teams \\
+- Each team has a single social media account.
+\item Social Media – Players \\
+- Each player has a single social media account.
+\item Media\_Rights - Matches\\
+- Each match has single media rights.
+\end{enumerate}
+
+\subsection{Roles}
+
+\begin{enumerate}
+\item Teams – Captains \\
+- Captains hold a specific role within their teams.
+\item Departments – Heads \\
+- Department heads have specific leadership roles.
+\item Committee Members – Chair \\
+- Chairs have leadership roles within committees.
+\end{enumerate}
+
+\newpage
+\section{\underline{2. Grouping All Relationships}}
+\subsection{1. Player Profile}
+
+\begin{tabular}{|C|C|C|C|}
+\hline
+    \textbf{Entity Name} &\textbf{Relationship Name} & \textbf{Entity Name} & \textbf{Relationship}\\\hline
+        Players & Players-Registered & Registration & One-to-One\\\hline
+        Players & Players-Contracts & Contracts & One-to-Many\\\hline
+        Players & Players-Teams & Teams & Many-to-One\\\hline
+        Players & Players-Coaches & Player-Coaches & Many-to-One\\\hline
+        Players & Players-Matches & Matches & Many-to-Many\\\hline
+        Players & Players-Practice\_Sessions & Practice\_Sessions & Many-to-Many\\\hline
+        Players & Players-Scorers & Scorers & Many-to-Many\\\hline
+        Players & Players-Awards & Awards & Many-to-One\\
+\hline
+\end{tabular}
+\newline
+
+\subsection{2. Coach Support}
+\begin{tabular}{|C|C|C|C|}
+\hline
+    \textbf{Entity Name} &\textbf{Relationship Name} & \textbf{Entity Name} & \textbf{Relationship}\\\hline
+        Coaches & Coaches-Contracts & Contracts & One-to-One\\\hline
+        Coaches & Coaches-Teams & Teams & One-to-Many\\\hline
+        Coaches & Coaches-Matches & Matches & Many-to-Many\\\hline
+        Coaches & Coaches-Practice\_Sessions & Practice\_Sessions & Many-to-many\\
+\hline
+\end{tabular}
+\newline
+
+\subsection{3. Team Management}
+\begin{tabular}{|C|C|C|C|}
+\hline
+    \textbf{Entity Name} &\textbf{Relationship Name} & \textbf{Entity Name} & \textbf{Relationship}\\\hline
+        Teams & Teams-Practice & Practice\_Sessions & One-to-Many\\\hline
+        Teams & Teams-Training & Training\_Equipment & One-to-Many\\\hline
+        Teams & Captains & Teams & Role\\\hline
+        Teams & Teams-Awards & Awards & Many-to-One\\\hline
+        Teams & Teams-Tournaments & Tournaments & Many-to-Many\\\hline
+        Teams & Teams-Medical\_Staffs & Medical\_Staffs & Many-to-One\\\hline
+        Teams & Teams-Sponsors & Sponsors & Many-to-Many\\
+\hline
+\end{tabular}
+\newline
+
+\subsection{4. Player Health and Recovery}
+
+\begin{tabular}{|C|C|C|C|}
+\hline
+    \textbf{Entity Name} &\textbf{Relationship Name} & \textbf{Entity Name} & \textbf{Relationship}\\\hline
+        Injuries & Injuries-Players & Player & Many-to-Many\\\hline
+        Injuries & Injuries-Matches & Matches & Many-to-Many\\\hline
+        Injuries & Injuries-Practice\_Sessions & Practice\_Sessions & Many-to-Many\\\hline
+        Injuries & Injuries-Medical\_Staffs & Medical\_Staffs & One-to-Many\\
+\hline
+\end{tabular}
+\newline
+
+\subsection{5. Committees}
+\begin{tabular}{|C|C|C|C|}
+\hline
+    \textbf{Entity Name} &\textbf{Relationship Name} & \textbf{Entity Name} & \textbf{Relationship}\\\hline
+         Committee\_Members & Members-Selection & Selection\_Committee & Many-to-One\\\hline
+         Selection\_Committee & Selected-Players & Players & Many-to-Many\\\hline
+         Committee\_Members & Chair& Committee\_Members & Role\\
+        
+         
+        
+\hline
+\end{tabular}
+
+\subsection{6. Match Logistics}
+\begin{tabular}{|C|C|C|C|}
+\hline
+    \textbf{Entity Name} &\textbf{Relationship Name} & \textbf{Entity Name} & \textbf{Relationship}\\\hline
+         Matches & Matches-Teams & Teams & One-to-One \\\hline
+         Matches & Matches-Umpires & Umpires & Many-to-Many\\\hline
+         Matches & Matches-Match\_Officials & Match\_Officials & Many-to-Many\\\hline
+         Matches & Matches-Grounds & Grounds & Many-to-One\\\hline
+         Matches & Matches-Scorers & Scorers & Many-to-Many\\\hline
+         Matches & Matches-Practice\_Sessions & Practice\_Sessions & Many-to-One\\\hline
+         Matches & Matches-Tournaments & Tournaments & Many-to-One\\
+\hline
+\end{tabular}
+\newline
+
+\subsection{7. Logistics and Operations}
+\begin{tabular}{|C|C|C|C|}
+\hline
+    \textbf{Entity Name} &\textbf{Relationship Name} & \textbf{Entity Name} & \textbf{Relationship}\\\hline
+         Departments & Heads & Departments & Role\\\hline
+         Training\_Equipment & Training-Session & Practice\_Session & Many-to-Many\\\hline
+         Transportation & Transportation-Matches & Matches & Many-to-Many\\\hline
+         Transportation & Transportation-Tournaments & Tournaments & Many-to-Many\\\hline
+         Merchandise & Merchandise-Matches & Matches & Many-to-One\\\hline
+         Merchandise & Merchandise-Teams & Teams & Many-to-One\\\hline
+         Ticketing  & Ticketing-Matches & Matches & Many-to-One\\
+\hline
+\end{tabular}
+\newline
+
+\subsection{8. Media Promotion}
+\begin{tabular}{|C|C|C|C|}
+\hline
+    \textbf{Entity Name} &\textbf{Relationship Name} & \textbf{Entity Name} & \textbf{Relationship}\\\hline
+         Media\_Coverage & Media\_Coverage-Matches & Matches & Many-to-Many\\\hline
+         Social\_Media & Social\_Media-Teams & Teams & One-to-One\\\hline
+         Social\_Media & Social\_Media-Players & Players & One-to-One\\\hline
+         Media\_Rights & Media\_Rights-Matches & Matches & One-to-One\\
+\hline
+\end{tabular}
+\newline
+\subsection{9. Community Engagement}
+\begin{tabular}{|C|C|C|C|}
+\hline
+    \textbf{Entity Name} &\textbf{Relationship Name} & \textbf{Entity Name} & \textbf{Relationship}\\\hline
+         Community\_Outreach & Outreach-Fan\_Clubs & Fan\_Clubs & Many-to-Many\\\hline
+         Community\_Outreach & Outreach\_Volunteers & Volunteers & Many-to-Many\\\hline
+         Community\_Outreach & Outreach\_Charity\_Drives & Charity\_Drives & Many-to-Many\\\hline
+         Charity\_Drives & Charity\_Drives-Sponsors & Sponsors & Many-to-Many\\\hline
+         Charity\_Drives & Charity\_Drives-Teams & Teams & Many-to-Many\\\hline
+         Charity\_Drives & Charity\_Drives-Players & Players & Many-to-Many\\\hline
+         Fan\_Clubs & Fan\_Clubs-Teams & Teams & One-to-One\\\hline
+         Fan\_Clubs & Fan\_Clubs-Players & Players & Many-to-Many\\
+\hline
+\end{tabular}
+
+\end{document}
+
+
+
+
