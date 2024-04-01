@@ -17,7 +17,7 @@
 * VS Code
 * Xampp
 
-# Learning Resources
+## Learning Resources
 * HTML - https://www.w3schools.com/html/
 * CSS - https://www.w3schools.com/css/default.asp
 * Bootstrap - https://www.w3schools.com/bootstrap4/default.asp
