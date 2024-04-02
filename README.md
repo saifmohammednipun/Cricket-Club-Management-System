@@ -25,8 +25,8 @@
 * JQery - https://www.w3schools.com/jquery/default.asp
 * PHP - https://www.w3schools.com/php/default.asp
 * Python - https://www.w3schools.com/python/default.asp
-* Django -
-1. https://www.w3schools.com/django/index.php 
-2. https://www.geeksforgeeks.org/django-tutorial/
-3. https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django
+* Django Framework - 
+    1. https://www.w3schools.com/django/index.php 
+    2. https://www.geeksforgeeks.org/django-tutorial/
+    3. https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django
 * SQL - https://www.w3schools.com/sql/default.asp
