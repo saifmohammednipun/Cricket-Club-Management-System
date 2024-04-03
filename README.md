@@ -15,7 +15,7 @@
 
 ## Environment 
 * VS Code
-* XAMMPP
+* XAMPP
 
 ## Learning Resources
 * SQL - https://www.w3schools.com/sql/default.asp
