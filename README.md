@@ -30,4 +30,3 @@
     1. https://www.w3schools.com/django/index.php 
     2. https://www.geeksforgeeks.org/django-tutorial/
     3. https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django
-    
