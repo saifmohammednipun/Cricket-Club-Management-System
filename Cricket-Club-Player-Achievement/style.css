@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(130, 106, 251);
+    padding: 0 10px;
+}
+
+.container{
+    max-height: 900px;
+    width: 40%;
+    background-color: white;
+    margin: 50px auto;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.container .title
+{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    color: rgb(130, 106, 251);
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.container .form
+{
+    width: 100%;
+    padding: 0 20px;
+}
+
+.container .form .inputField
+{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+
+}
+
+.container .form .inputField label
+{
+    width: 200px;
+    font-size: 18px;
+    margin-right: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container .form .inputField .input{
+    border: 1px solid rgb(130, 106, 251);
+    width: 100%;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+
+}
+
+.container .form .inputField .btn{
+    width: 100%;
+    background-color: rgb(130, 106, 251);
+    color: white;
+    cursor: pointer;
+    margin-bottom: 25px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.container .form .inputField .btn:hover{
+    background-color: rgb(56, 40, 135);
+
+}
+
+@media (max-width: 425px)
+{
+    .container .form .inputField
+    {
+        flex-direction: column;
+        align-items: flex-start;
+   
+    }
+
+    .container .form .inputField label
+    {
+        margin-bottom: 5px;
+    }
+}
+
