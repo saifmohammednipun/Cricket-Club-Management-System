@@ -4,8 +4,7 @@
 * HTML
 * CSS
 * Bootstrap
-* JavaScript
-
+* 
 ## BackEnd
 * PHP
 * Django-Python Framework
