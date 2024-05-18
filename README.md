@@ -11,7 +11,3 @@
 
 ## Database 
 * MySQL
-
-## Environment 
-* VS Code
-* XAMPP
