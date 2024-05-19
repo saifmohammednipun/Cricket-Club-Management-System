@@ -10,24 +10,24 @@ body{
 }
 
 .container{
-    max-height: 900px;
-    width: 40%;
+    max-height: 1000px;
+    width: 50%;
     background-color: white;
     margin: 50px auto;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2); 
 }
 
+
 .container .title
 {
     text-align: center;
-    font-size: 24px;
+    font-size: 25px;
     font-weight: 700;
-    margin-top: 50px;
+    margin-top: 25px;
     margin-bottom: 25px;
     color: rgb(130, 106, 251);
     text-transform: uppercase;
     font-family: 'Times New Roman', Times, serif;
-
 }
 
 .container .form
@@ -35,6 +35,19 @@ body{
     width: 100%;
     padding: 0 20px;
 }
+
+.container .form .section
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color:white;
+    background-color: rgb(120, 99, 226);
+
+}
+
 
 .container .form .inputField
 {
@@ -46,7 +59,7 @@ body{
 
 .container .form .inputField label
 {
-    width: 200px;
+    width: 300px;
     font-size: 18px;
     margin-right: 10px;
     font-family: 'Times New Roman', Times, serif;
@@ -74,7 +87,6 @@ body{
     background-color: rgb(56, 40, 135);
 
 }
-
 @media (max-width: 425px)
 {
     .container .form .inputField

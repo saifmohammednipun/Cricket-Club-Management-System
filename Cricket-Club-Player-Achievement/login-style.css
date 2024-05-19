@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(130, 106, 251);
+
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.center h1
+{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(130, 106, 251);
+}
+
+.form
+{
+    padding-bottom: 15px;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.textfield{
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    border: 2px solid rgb(130, 106, 251);
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    margin: 7px 0;
+}
+
+.btn{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(130, 106, 251);
+    border-radius: 5px;
+    margin: 7px 0;
+    color: white;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    
+}
+
+.btn:hover{
+    background-color: rgb(88, 72, 167);
+}
+
+.forgetpass{
+    padding: 4px 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.link{
+    text-decoration: none;
+    color: rgb(88, 72, 167)
+}
+
+@media (max-width: 470px){
+    .center{
+        width: 88%;
+    }
+}

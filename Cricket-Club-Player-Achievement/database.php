@@ -2,7 +2,7 @@
     $server = "localhost";
     $username = "root";
     $password = "";
-    $database = "PlayerAchievement";    
+    $database = "clubdatabase";    
     $conn = "";
 
     try{
@@ -12,6 +12,7 @@
     }
 
     if($conn) {
-        //echo "Connection is successful";
+        echo "Connection is successful";
     }
+
 ?>
