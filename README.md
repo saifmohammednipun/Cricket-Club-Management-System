@@ -7,7 +7,7 @@
 
 ## BackEnd
 * PHP
-* Django-Python Framework
 
 ## Database 
 * MySQL
+
