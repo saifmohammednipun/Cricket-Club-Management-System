@@ -3,7 +3,6 @@
 ## FrontEnd 
 * HTML
 * CSS
-* Bootstrap
 
 ## BackEnd
 * PHP
