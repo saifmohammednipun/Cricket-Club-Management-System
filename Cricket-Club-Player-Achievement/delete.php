@@ -16,7 +16,7 @@ $query_basic = "DELETE FROM Player WHERE player_id = '$player_id'";
 $result1 = mysqli_query($conn, $query_basic);
 if($result1) {
             echo "<script>alert('Player deleted successfully!');</script>";
-            header('location:display.php');
+            header('location:admin_dasboard.php');
 } else {
     echo "<script>alert('Player deletion failed!');</script>";
     echo "Error: " . mysqli_error($conn);

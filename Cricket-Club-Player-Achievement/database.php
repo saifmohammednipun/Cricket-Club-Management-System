@@ -12,7 +12,7 @@
     }
 
     if($conn) {
-        echo "Connection is successful";
+        // echo "Connection is successful";
     }
 
 ?>

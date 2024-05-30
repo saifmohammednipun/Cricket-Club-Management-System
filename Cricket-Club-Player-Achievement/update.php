@@ -3,16 +3,13 @@
 
     session_start();
 
-    echo "<h1>Welcome ".$_SESSION['username']."</h1>";
+    //echo "<h1>Welcome ".$_SESSION['username']."</h1>";
 
-    $username = $_SESSION['username'];
-
-    if($username == true)
-    {
-        
-    }else{
-        header('location:login.php');
-    }
+    // Check if the user is logged in, if not redirect to login page
+if (!isset($_SESSION['username']) || $_SESSION['usertype'] != 'admin') {
+    header('location:login.php');
+    exit;
+}
 
     $player_id = $_GET['player_id'];
 
@@ -94,7 +91,7 @@
 
             <div class="inputField">
                 <label>Graduation Institute</label>
-                <input type="text" value= "<?php echo $row['institute'];?>" class="input" placeholder=" Enter Institute Name" name="institute">
+                <input type="text" value= "<?php echo $row['institution'];?>" class="input" placeholder=" Enter Institute Name" name="institution">
             </div>
 
             <div class="inputField">
@@ -142,7 +139,7 @@ if(isset($_POST['update'])) {
     $dob = $_POST['dob'];
     $age = $_POST['age'];
     $degree = $_POST['degree'];
-    $institute = $_POST['institute'];
+    $institution = $_POST['institution'];
     $passing_year = $_POST['passing_year'];
     $academy = $_POST['academy'];
     $specialization = $_POST['specialization'];
@@ -155,7 +152,7 @@ if(isset($_POST['update'])) {
         $query_basic = "UPDATE Player 
                         SET first_name = '$first_name', middle_name = '$middle_name', last_name = '$last_name', email = '$email', phone_number = '$phone_number', nationality = '$nationality', dob = '$dob', age = '$age' WHERE player_id = '$player_id'";
         $query_education = "UPDATE Player_Education 
-                            SET degree = '$degree', institute = '$institute', passing_year = '$passing_year' WHERE player_id = '$player_id'";
+                            SET degree = '$degree', institution = '$institution', passing_year = '$passing_year' WHERE player_id = '$player_id'";
         $query_training = "UPDATE Player_Training 
                            SET academy = '$academy', specialization = '$specialization' WHERE player_id = '$player_id'";
 
