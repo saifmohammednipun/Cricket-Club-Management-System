@@ -1,6 +1,6 @@
-# NSU Cricket Club Management System
+# Cricket Club Management System
 
-This project was developed as part of the CSE311 Database Management System course. The system is designed to manage various aspects of a cricket club, including player profile, registration, match scheduling, and achievement tracking.
+Welcome to the Cricket Club Management System repository. This project was developed as part of the CSE311 Database Management System course. The system is designed to manage various aspects of a cricket club, including player registration, match scheduling, and achievement tracking.
 
 ## Table of Contents
 
@@ -20,8 +20,12 @@ The Cricket Club Management System is a web-based application that allows admini
 
 - **User Authentication:** Secure login for admins and players.
 - **Player Management:** Register new players and manage player profiles.
+- **Clubs Info:** Manage and view information about different cricket clubs.
+- **Teams Info:** Manage and view details of various teams within the clubs.
 - **Match Scheduling:** Schedule matches and manage match details.
+- **Match Results:** Record and display the results of matches.
 - **Achievement Tracking:** Track and display the achievements of the club and its players.
+- **Player Contracts:** Update and manage player contracts.
 - **Responsive Design:** User-friendly interface that works on various devices.
 
 ## Technologies Used
@@ -60,6 +64,10 @@ Once the installation is complete, you can access the application via your web b
 - **Admin Login:** Navigate to the admin login page to access administrative functionalities.
 - **Player Login:** Players can log in to view and update their profiles.
 - **Register New Players:** New players can register using the registration form.
+- **Manage Clubs and Teams:** Admins can manage club and team information.
+- **Schedule Matches:** Admins can schedule upcoming matches.
+- **Record Match Results:** Admins can record the results of completed matches.
+- **Update Player Contracts:** Admins can update player contract details.
 
 ## Contributing
 
