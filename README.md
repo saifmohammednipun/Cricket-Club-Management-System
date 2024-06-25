@@ -1,7 +1,7 @@
 # Cricket Club Management System
 
 Welcome to the Cricket Club Management System repository. This project was developed as part of the CSE311 Database Management System course. The system is designed to manage various aspects of a cricket club, including player registration, match scheduling, and achievement tracking.
-
+- Project Link: https://nsu-cricket-club-managment-system.netlify.app
 ## Table of Contents
 
 - [Project Overview](#project-overview)
